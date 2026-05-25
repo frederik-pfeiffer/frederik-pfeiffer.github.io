@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frederik Pfeiffer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --text: #1a1a1a;
+      --muted: #666;
+      --accent: #2a4a6b;
+      --bg: #faf9f7;
+      --line: #e0ddd8;
+      --serif: 'EB Garamond', Georgia, serif;
+      --sans: 'DM Sans', system-ui, sans-serif;
+    }
+
+    html { font-size: 17px; }
+    body {
+      font-family: var(--serif);
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Layout */
+    .site-wrapper {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* Header / Nav */
+    header {
+      padding: 2.8rem 0 0;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 1.1rem;
+      margin-bottom: 3rem;
+    }
+
+    header .site-name {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.6rem;
+      align-items: baseline;
+    }
+
+    nav a {
+      font-family: var(--sans);
+      font-size: 0.82rem;
+      font-weight: 300;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    nav a:hover, nav a.active { color: var(--text); }
+
+    /* Main content */
+    main {
+      display: grid;
+      grid-template-columns: 1fr 200px;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    @media (max-width: 580px) {
+      main { grid-template-columns: 1fr; }
+      .photo-col { order: -1; }
+      .photo-col img { width: 120px; }
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: 1.9rem;
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 0.3rem;
+      letter-spacing: -0.01em;
+    }
+
+    .subtitle {
+      font-family: var(--sans);
+      font-size: 0.82rem;
+      font-weight: 300;
+      letter-spacing: 0.03em;
+      color: var(--muted);
+      margin-bottom: 1.8rem;
+      text-transform: uppercase;
+    }
+
+    .bio p {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+    .bio p:last-child { margin-bottom: 0; }
+
+    /* Photo */
+    .photo-col img {
+      width: 100%;
+      display: block;
+      filter: grayscale(10%);
+    }
+
+    /* Contact block */
+    .contact {
+      margin-top: 2.8rem;
+      padding-top: 1.4rem;
+      border-top: 1px solid var(--line);
+      font-family: var(--sans);
+      font-size: 0.82rem;
+      font-weight: 300;
+      color: var(--muted);
+      line-height: 1.9;
+    }
+    .contact address { font-style: normal; margin-bottom: 0.8rem; }
+    .contact .links { display: flex; flex-wrap: wrap; gap: 0.5rem 1.2rem; }
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+    .contact a:hover { border-bottom-color: var(--accent); }
+
+    /* Footer */
+    footer {
+      margin-top: 4rem;
+      padding: 1.4rem 0 2.5rem;
+      border-top: 1px solid var(--line);
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      font-weight: 300;
+      color: #aaa;
+    }
+
+    em { font-style: italic; }
+  </style>
+</head>
+<body>
+  <div class="site-wrapper">
+    <header>
+      <a href="index.html" class="site-name">Frederik Pfeiffer</a>
+      <nav>
+        <a href="index.html" class="active">About</a>
+        <a href="publications.html">Publications</a>
+        <a href="https://www.gu.se/sites/default/files/pop_assets/295bc632-af5f-4b06-bf23-24965d61e0f3-resume.pdf" target="_blank">CV</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="text-col">
+        <h1>Frederik Pfeiffer</h1>
+        <p class="subtitle">Doctoral Student &middot; Department of Political Science, University of Gothenburg</p>
+
+        <div class="bio">
+          <p>
+            I am a PhD candidate in Political Science at the University of Gothenburg, where I have been since fall 2022. I am supervised by Professors Aksel Sundström and Sverker Jagers. My research focuses on deliberative democracy, participation, and democratic attitudes, with a particular emphasis on climate and environmental politics.
+          </p>
+          <p>
+            My work is both empirical — with a strong focus on survey experiments and field studies — and theoretical, engaging with conceptualisations of legitimacy, political efficacy, and equality. Much of my recent research has centred on participatory and deliberative processes in Sweden, conducting participant surveys at deliberative mini-publics and citizen juries.
+          </p>
+          <p>
+            In fall 2025, I was affiliated with the Department of Political Science at Johannes Gutenberg University Mainz, Germany, as a guest researcher in the Chair of Political Theory and Public Policy, held by Prof. Claudia Landwehr.
+          </p>
+          <p>
+            I hold a BSc in International Economics and European Studies from the University of Tübingen and an MSc in Comparative Public Policy and Welfare Studies from the University of Southern Denmark. Beyond research, I give talks at schools and occasionally advise city officials on deliberative processes.
+          </p>
+          <p>
+            I teach Master-level courses on environmental politics and supervise Bachelor and Master theses. Students interested in supervision are welcome to reach out.
+          </p>
+        </div>
+
+        <div class="contact">
+          <address>
+            Department of Political Science<br />
+            University of Gothenburg<br />
+            Sprängkullsgatan 19, 411 23 Göteborg<br />
+            Room B432
+          </address>
+          <div class="links">
+            <a href="mailto:frederik.pfeiffer@gu.se">frederik.pfeiffer@gu.se</a>
+            <a href="https://www.gu.se/en/about/find-staff/frederikpfeiffer" target="_blank">GU profile</a>
+            <a href="https://scholar.google.com/citations?user=N9AwTNoAAAAJ&hl=en" target="_blank">Google Scholar</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-col">
+        <img
+          src="https://www.gu.se/sites/default/files/styles/33_10_x_medium_2x/public/pop_assets/295bc632-af5f-4b06-bf23-24965d61e0f3-photo.jpg?itok=tmQws4G5"
+          alt="Frederik Pfeiffer"
+        />
+      </div>
+    </main>
+
+    <footer>&copy; 2026 Frederik Pfeiffer</footer>
+  </div>
+</body>
+</html>
